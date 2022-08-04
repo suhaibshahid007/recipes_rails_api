@@ -38,8 +38,9 @@ resources :ingredients, only: [:index, :create, :show, :update, :destroy] do
 resources :categories, only: [:index, :create, :show, :update, :destroy] do
  end
 
-resources :recipes, only: [:index, :create, :show, :update, :destroy] do
- end
+  resources :recipes, only: [:index, :create, :show, :update, :destroy] do
+    resources :ratings, only: [:index, :create, :show, :update, :destroy]
+  end
 
   end
 
@@ -47,7 +48,7 @@ resources :recipes, only: [:index, :create, :show, :update, :destroy] do
 
   namespace :dashboard do
     # TODO: customizable table name
-    
+
 
   end
 
