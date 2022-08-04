@@ -1,5 +1,5 @@
 class RatingSerializer < BaseSerializer
-  attributes :score
+  attributes :id, :score
 
   belongs_to :user
   belongs_to :recipe

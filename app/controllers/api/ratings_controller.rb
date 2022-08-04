@@ -1,4 +1,4 @@
-class Api::RecipesController < Api::BaseController
+class Api::RatingsController < Api::BaseController
   # jitera-anchor-dont-touch: before_action_filter
   before_action :doorkeeper_authorize!, only: %w[index show update destroy]
   before_action :current_user_authenticate, only: %w[index show update destroy]

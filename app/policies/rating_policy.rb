@@ -1,4 +1,4 @@
-class CategoryPolicy < ApplicationPolicy
+class RatingPolicy < ApplicationPolicy
   def index?
     true
   end
