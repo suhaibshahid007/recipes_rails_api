@@ -55,4 +55,9 @@ class Api::RecipesController < Api::BaseController
 
     @recipes = Recipe.all
   end
+
+  def search
+    @recipes = RecipesCollection.new(Recipe.all, params).call
+    @error_object = { message: 'No Recipes Found' } if @recipes.blank?
+  end
 end
